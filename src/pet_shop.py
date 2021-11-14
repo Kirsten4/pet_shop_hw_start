@@ -73,3 +73,12 @@ def customer_can_afford_pet(customer,new_pet):
         return False
 
 
+def sell_pet_to_customer(pet_shop_dict,pet_dict,customer):
+    if pet_dict != None:
+        if customer_can_afford_pet(customer,pet_dict):
+            add_pet_to_customer(customer,pet_dict)
+            increase_pets_sold(pet_shop_dict,1)
+            price = pet_dict["price"]
+            remove_customer_cash(customer,price)
+            add_or_remove_cash(pet_shop_dict,price)
+        
