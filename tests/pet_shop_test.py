@@ -198,7 +198,7 @@ class TestPetShop(unittest.TestCase):
 
         self.assertEqual(1, get_customer_pet_count(customer))
         self.assertEqual(1, get_pets_sold(self.cc_pet_shop))
-        # self.assertEqual(100, get_customer_cash(customer))
+        self.assertEqual(100, get_customer_cash(customer))
         self.assertEqual(1900, get_total_cash(self.cc_pet_shop))
 
     # @unittest.skip("delete this line to run the test")
